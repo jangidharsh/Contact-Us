@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -10,7 +10,7 @@ body{
     width: 100%;
     /* overflow-x: hidden; */
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(79, 79, 75));
-    font-family: "Open Sans", sans-serif;
+      font-family: "Poppins";
 
 }
 
@@ -20,22 +20,42 @@ body{
     display: flex;
     
 }
- h1{
+.main-heading{
     display: flex;
     justify-content: center;
     height: 30vh;
-    font-size: 2vw;
+    font-size: 3vw;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
+}
+.main-heading span {
+    background-image: linear-gradient(-225deg, #614d18 0%, #0d0c08 29%, #705417 67%, #614711 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: ani 2s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
 }
 .text-heading{
     font-size: 2.5vw;
-    font-weight: 200;
+    font-weight: 100;
+}
+p{
+    margin-top: 3vh;
+    font-size: 1.5rem;
 }
 h2{
-    margin-top: 3vh;
-    font-weight: 300;
-    
+    margin-top: 2vh;
+    font-size: 1.5rem;
 }
 .contact-form{
     height: 40vh;
@@ -48,15 +68,82 @@ h2{
     padding: 1vh 7vw;
 }
 .form-control input{
-    height: 10vh;
+    height: 8vh;
     width: 36vw;
     border: none;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(79, 79, 75));
+    /* background: linear-gradient(to right, rgb(255, 255, 255), rgb(79, 79, 75)); */
+    background-color: white;
 }
 
 .form-control button{
     font-size: 1.2vw;
     padding: 2vh 2vw;
-    background-color:rgb(109, 67, 0);;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: black;
+    margin-top: 3vh;
+}
+
+.form-control button:hover{
+    background-color:rgb(109, 67, 0);
     color: white;
+}
+
+@media only screen and (max-width: 800px){
+    .conatainer{
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
+    justify-content: center;
+}
+ .main-heading{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    font-size: 6vw;
+    align-items: center;
+    font-weight: 400;
+}
+.contact-form{
+    height: 50vh;
+    width: 100vw;
+}
+.form-control{
+    padding: 1vh 15vw;
+}
+.form-control input{
+    height: 8vh;
+    width: 70vw;
+    border: none;
+    /* background: linear-gradient(to right, rgb(255, 255, 255), rgb(79, 79, 75)); */
+    background-color: white;
+}
+
+.text-part{
+    height: 50vh;
+    width: 70vw;
+}
+.text-heading{
+    font-size: 5vw;
+    font-weight: 300;
+    width: 60vw;
+    padding: 0 8vw;
+    color: black;
+}
+p{
+    color: gray;
+    margin-top: 3vh;
+    font-size: 1rem;
+    padding: 0 8vw;
+}
+h2{
+    color: gray;
+    margin-top: 2vh;
+    font-size: 1rem;
+    padding: 0 8vw;
+}
+h2 i{
+    color: #0d0c08;
+}
 }
